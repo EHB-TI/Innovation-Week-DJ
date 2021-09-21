@@ -11,58 +11,82 @@ function Circle(props) {
     );
 }
 
-//Navigation with circles
-class Navigation extends React.Component {
+//Option buttons
+function Option(props) {
+    return (
+    <button className="option" onClick={props.onClick}>
+        {props.value}
+    </button>
+    );
+}
+
+  class Car extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
           buttons: Array(9).fill(null),
-          xIsNext: true,
+          imageClass: "homeClass"
         };
       }
-      
-      handleClick(i) {
-        const buttons = this.state.buttons.slice();
-        buttons[i] = this.state.xIsNext ? 'X' : 'O';
-        this.setState({buttons: buttons,
-                      xIsNext: !this.state.xIsNext,
-                      });
+
+    handleClick(i) {
+        switch(i) {
+            case "NameHome":
+                this.setState({
+                    imageClass: "homeClass"
+                })
+                break
+            case "NameDash":
+                this.setState({
+                    imageClass: "dashClass"
+                }) 
+                break 
+            case "NameWheel":
+                this.setState({
+                    imageClass: "wheelClass"
+                })
+                break
+            case "NameChair":
+                this.setState({
+                    imageClass: "chairClass"
+                })
+                break
+            case "NameTest":
+                this.setState({
+                    imageClass: "testClass"
+                })
+                break
+        }
+        console.log("Button was pressed")
       }
-    
-      renderSquare(i) {
+
+    renderCircle(i) {
         return (
           <Circle
-            value={this.state.buttons[i]}
+            value={i}
             onClick={() => this.handleClick(i)}
           />
         );
       }
 
     render() {
-        return (
-          <div className="navigation">
-              {this.renderSquare(0)}
-              {this.renderSquare(1)}
-              {this.renderSquare(2)}
-              {this.renderSquare(3)}
-              {this.renderSquare(4)}
-              {this.renderSquare(5)}
-              {this.renderSquare(6)}
-              {this.renderSquare(7)}
-              {this.renderSquare(8)}
-          </div>
-        );
-    }
-}
-
-
-  
-  
-  
-  class Car extends React.Component {
-    render() {
       return (
-            <Navigation />
+          <div className="total">
+            <div 
+            className={this.state.imageClass}>
+            </div>
+            <div className="bar">
+                <div className="navigation">
+                    {this.renderCircle("NameHome")}
+                    {this.renderCircle("NameDash")}
+                    {this.renderCircle("NameWheel")}
+                    {this.renderCircle("NameChair")}
+                    {this.renderCircle("NameTest")}
+                </div>
+            </div>
+          </div>
+            
       );
     }
   }
