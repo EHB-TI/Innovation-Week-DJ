@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+}
+
+.particles-js-canvas-el {
+    z-index: -999;
+    position: fixed;
+}
