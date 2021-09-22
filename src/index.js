@@ -84,6 +84,9 @@ function Option(props) {
     handleClick(i) {
         if (i != this.state.current){
             this.returnOptionToBase();
+            this.setState({
+                current: i,
+            });
             switch(i) {
                 case "NameHome":
                     this.setState({
@@ -138,13 +141,13 @@ function Option(props) {
           <div className="total">
               <div>
                 <div 
-                className={this.state.imageClass}>
+                className={`carBased ${this.state.imageClass}`}>
                 </div>
-                <div className={this.state.optionClass1}>
+                <div className={`optionsBased ${this.state.optionClass1}`}>
                 </div>
-                <div className={this.state.optionClass2}>
+                <div className={`optionsBased ${this.state.optionClass2}`}>
                 </div>
-                <div className={this.state.optionClass3}>
+                <div className={`optionsBased ${this.state.optionClass3}`}>
                 </div>
               </div>
             <div className="bar">

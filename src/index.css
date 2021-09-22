@@ -1,8 +1,3 @@
-ol,
-ul {
-    padding-left: 30px;
-}
-
 .circle {
     border: 1px solid #999;
     float: left;
@@ -33,188 +28,101 @@ ul {
     width: 100%;
 }
 
-
-.homeClass {
+.carBased {
     height: 800px;
     width: 1000px;
     float: left;
     display: flex;
+    transition: all 2.5s ease;
+}
+
+.homeClass {
     background-image: url("bg.jfif");
-    transition: all 5s ease;
 }
 
 .dashClass {
-    height: 800px;
-    width: 1000px;
-    float: left;
-    display: flex;
     background-image: url("bg1.jfif");
-    transition: all 5s ease;
 }
 
 .wheelClass {
-    height: 800px;
-    width: 1000px;
-    float: left;
-    display: flex;
     background-image: url("bg2.jpg");
-    transition: all 5s ease;
 }
 
 .chairClass {
-    height: 800px;
-    width: 1000px;
-    float: left;
-    display: flex;
     background-image: url("bg3.jfif");
-    transition: all 5s ease;
 }
 
 .testClass {
-    height: 800px;
-    width: 1000px;
-    float: left;
-    display: flex;
     background-image: url("bg4.jpeg");
-    transition: all 5s ease;
+}
+
+.optionsBased{
+    height: 200px;
+    width: 400px;
+    margin-right: 20px;
+    float: right;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    -ms-transition: 1s all ease;
+    transition: 1s all ease;
 }
 
 .baseOptions1 {
     visibility: hidden;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 20px;
-    float: right;
     background-color: white;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .baseOptions2 {
     visibility: hidden;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 20px;
-    float: right;
     background-color: white;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .baseOptions3 {
     visibility: hidden;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 20px;
-    float: right;
     background-color: white;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .steerOptions1 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 150px;
-    float: right;
     background-color: black;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .steerOptions2 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
-    margin-top: 25px;
-    float: right;
+    margin-top: 20px;
     background-color: grey;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .wheelOptions1 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 150px;
-    float: right;
     background-color: blue;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .wheelOptions2 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
-    margin-top: 25px;
-    float: right;
+    margin-top: 20px;
     background-color: darkblue;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .wheelOptions3 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
-    margin-top: 25px;
-    float: right;
+    margin-top: 20px;
     background-color: lightblue;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .couchOptions1 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
     margin-top: 150px;
-    float: right;
     background-color: red;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
 
 .couchOptions2 {
     visibility: visible;
-    height: 200px;
-    width: 400px;
-    margin-right: 20px;
-    margin-top: 25px;
-    float: right;
+    margin-top: 20px;
     background-color: darkred;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    transition: 1s all ease;
 }
