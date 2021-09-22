@@ -34,6 +34,7 @@ function Option(props) {
           optionClass1: "baseOptions1",
           optionClass2: "baseOptions2",
           optionClass3: "baseOptions3",
+          currentCaros: "red",
         };
       }
 
@@ -57,7 +58,8 @@ function Option(props) {
                     this.setState({
                         optionClass1: "steerOptions1",
                         optionClass2: "steerOptions2",
-                        steerCheck: true
+                        steerCheck: true,
+                        currentCaros: "black"
                     })
                     break
             case "PushWheel":
@@ -65,7 +67,8 @@ function Option(props) {
                         optionClass1: "wheelOptions1",
                         optionClass2: "wheelOptions2",
                         optionClass3: "wheelOptions3",
-                        wheelCheck: true
+                        wheelCheck: true,
+                        currentCaros: "blue"
                     })
                     break
             case "PushCouch":
@@ -73,7 +76,8 @@ function Option(props) {
                     this.setState({
                         optionClass1: "couchOptions1",
                         optionClass2: "couchOptions2",
-                        steerCheck: true
+                        steerCheck: true,
+                        currentCaros: "orange"
                     })
                     break
         }
@@ -149,6 +153,9 @@ function Option(props) {
                 </div>
                 <div className={`optionsBased ${this.state.optionClass3}`}>
                 </div>
+                <div 
+                className="switchTesting"
+                style={{backgroundColor: this.state.currentCaros}}></div>
               </div>
             <div className="bar">
                 <div className="navigation">

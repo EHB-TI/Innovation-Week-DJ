@@ -60,6 +60,7 @@
     height: 200px;
     width: 400px;
     margin-right: 20px;
+    margin-top: 20px;
     float: right;
     -webkit-transition: 1s all ease;
     -moz-transition: 1s all ease;
@@ -69,19 +70,16 @@
 
 .baseOptions1 {
     visibility: hidden;
-    margin-top: 20px;
     background-color: white;
 }
 
 .baseOptions2 {
     visibility: hidden;
-    margin-top: 20px;
     background-color: white;
 }
 
 .baseOptions3 {
     visibility: hidden;
-    margin-top: 20px;
     background-color: white;
 }
 
@@ -93,7 +91,6 @@
 
 .steerOptions2 {
     visibility: visible;
-    margin-top: 20px;
     background-color: grey;
 }
 
@@ -105,13 +102,11 @@
 
 .wheelOptions2 {
     visibility: visible;
-    margin-top: 20px;
     background-color: darkblue;
 }
 
 .wheelOptions3 {
     visibility: visible;
-    margin-top: 20px;
     background-color: lightblue;
 }
 
@@ -123,6 +118,13 @@
 
 .couchOptions2 {
     visibility: visible;
-    margin-top: 20px;
     background-color: darkred;
+}
+
+.switchTesting {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
 }
