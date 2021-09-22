@@ -33,37 +33,43 @@ ul {
     width: 100%;
 }
 
+
 .homeClass {
     height: 800px;
+    width: 1000px;
     display: flex;
-    background-color: green;
+    background-image: url("bg.jfif");
     transition: all 5s ease;
 }
 
 .dashClass {
     height: 800px;
+    width: 1000px;
     display: flex;
-    background-color: red;
+    background-image: url("bg1.jfif");
     transition: all 5s ease;
 }
 
 .wheelClass {
     height: 800px;
+    width: 1000px;
     display: flex;
-    background-color: blue;
+    background-image: url("bg2.jpg");
     transition: all 5s ease;
 }
 
 .chairClass {
     height: 800px;
+    width: 1000px;
     display: flex;
-    background-color: orange;
+    background-image: url("bg3.jfif");
     transition: all 5s ease;
 }
 
 .testClass {
     height: 800px;
+    width: 1000px;
     display: flex;
-    background-color: black;
+    background-image: url("bg4.jpeg");
     transition: all 5s ease;
 }
