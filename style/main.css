@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+
+.particles-js-canvas-el {
+    z-index: -999;
+    position: fixed;
+}
+
+.button-text {
+    font-family: Miera-Bold;
+    color: #00afff;
+}
+
+@font-face {
+    font-family: MierA-Bold;
+    src: url(../fonts/miera/MierA-Bold.woff2);
+}
+
+.TextOne {
+    display: inline;
+    position: absolute;
+    top: calc(100% - 70px); 
+    left: calc((100% - (98px * 5))/6 + 20px);
+    opacity: 0;
+}
+.TextTwo {
+    display: inline;
+    position: absolute;
+    top: calc(100% - 70px); 
+    left: calc(((100% - (98px * 5))/6) * 2 + 98px);
+    opacity: 0;
+}
+.TextThree {
+    display: inline;
+    position: absolute;
+    top: calc(100% - 70px); 
+    left: calc(((100% - (98px * 5))/6) * 3 + (98px * 2) + 18px);
+    opacity: 0;
+}
+.TextFour {
+    display: inline;
+    position: absolute;
+    top: calc(100% - 70px);
+    left: calc(((100% - (98px * 5))/6) * 4 + (98px * 3) + 22px);
+    opacity: 0;
+}
+.TextFive {
+    display: inline;
+    position: absolute;
+    top: calc(100% - 70px); 
+    left: calc(((100% - (98px * 5))/6) * 5 + (98px * 4) + 10px);
+    opacity: 0;
+}

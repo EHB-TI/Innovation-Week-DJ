@@ -1,0 +1,79 @@
+.car {
+    visibility: hidden;
+    opacity: 0;
+    display: inline;
+    position: absolute;
+    left: calc(50% - 38vw);
+    top: calc(50% - 150px);
+}
+.car img {
+    width: 76vw;
+}
+
+.car2 {
+    left: calc(50% - 38vw);
+    top: 20%;
+    display: inline;
+    position: absolute;
+}
+.car2 img {
+    width: 76vw;
+}
+.car2-options {
+    left: calc(50% - 22vw);
+    top: 28%;
+    display: inline;
+    position: absolute;
+}
+.car2-options img {
+    width: 17vw;
+}
+.dashboard {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.car3{
+    left: calc(50% - 38vw);
+    top: calc(50% - 150px);
+    display: inline;
+    position: absolute;
+}
+.car3 img{
+    width: 76vw;
+}
+.wheels {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.light {
+    opacity: 0;
+}
+
+.light:hover{
+    opacity: 1;
+}
+
+.cirlce {
+    display: inline;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.fadeOut{
+    opacity:0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s 0s;
+}
+.fadeIn{
+    opacity:1;
+    visibility: visible;
+    transition: opacity 0.5s 0.5s, visibility 0.5s 0s;
+}
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+  }
