@@ -30,19 +30,19 @@ function Colour(props) {
   switch (props.colour) {
     case "metal":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: 'calc(100% + 10vw)', animation: 'pop 0.3s linear 1'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: 'calc(100% + 10vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "black":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: 'calc(100% + 20vw)', animation: 'pop 0.3s linear 1'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: 'calc(100% + 20vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.3s', animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "blue":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: 'calc(100% + 30vw)', animation: 'pop 0.3s linear 1'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: 'calc(100% + 30vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.6s', animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "pink":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: 'calc(100% + 40vw)', animation: 'pop 0.3s linear 1'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: 'calc(100% + 40vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.9s', animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
   }
 }
