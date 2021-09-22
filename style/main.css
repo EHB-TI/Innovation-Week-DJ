@@ -6,3 +6,24 @@ body {
     z-index: -999;
     position: fixed;
 }
+
+.car {
+    visibility: hidden;
+    opacity: 0;
+    display: inline;
+    position: absolute;
+    left: calc(50% - 38vw);
+    top: calc(50% - 150px);
+}
+
+.light {
+    opacity: 0;
+}
+
+.light:hover{
+    opacity: 1;
+}
+
+.car img {
+    width: 76vw;
+}
