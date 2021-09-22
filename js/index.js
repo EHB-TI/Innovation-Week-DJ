@@ -47,6 +47,14 @@ function Colour(props) {
   }
 }
 
+function Steering(props) {
+
+}
+
+function Wheels(props) {
+  
+}
+
 // Main Class
 class App extends React.Component {
   constructor(props) {
@@ -155,6 +163,7 @@ class App extends React.Component {
     }
   }
 
+  //colour picker
   colourAppear () {
     ReactDOM.render( 
       <div>
@@ -183,6 +192,28 @@ class App extends React.Component {
       <div></div>,
       document.getElementById('color-overlay')
     );
+  }
+
+  //steering wheel picker
+  steeringAppear () {
+
+  }
+
+  steeringSelect () {
+    
+  }
+
+  //wheel picker
+  wheelAppear () {
+
+  }
+
+  wheelSelect () {
+
+  }
+
+  wheelReset () {
+
   }
 
   render() {
@@ -229,7 +260,7 @@ class App extends React.Component {
                 <img className="image" src="img/round-steering-wheel.png"/>
               </div>
               <div className={`car2-options`}>
-                <img className="light" src="img/round-steering-wheel-light.png"/>
+                <img className="light" src="img/round-steering-wheel-light.png" onClick={() => this.steeringAppear()}/>
               </div>
             </div>
           </div>
@@ -240,7 +271,7 @@ class App extends React.Component {
             </div>
             <div id="wheel-colour"></div>
             <div className={`car3`}>
-                <img className="light" src="img/car-wheel.png"/>
+                <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
             </div>
           </div>
 
