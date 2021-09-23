@@ -30,29 +30,29 @@ function Colour(props) {
   switch (props.colour) {
     case "metal":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: 'calc(100% + 10vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationFillMode: 'forwards'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "black":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: 'calc(100% + 20vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.3s', animationFillMode: 'forwards'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "blue":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: 'calc(100% + 30vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.6s', animationFillMode: 'forwards'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
     case "pink":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: 'calc(100% + 40vw)', opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: '0.9s', animationFillMode: 'forwards'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
+      )
+    case "white":
+      return (
+        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#fdfdfd', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
       )
   }
 }
 
 function Steering(props) {
 
-}
-
-function Wheels(props) {
-  
 }
 
 // Main Class
@@ -167,10 +167,10 @@ class App extends React.Component {
   colourAppear () {
     ReactDOM.render( 
       <div>
-        <Colour colour="metal" onClick={() => this.colorReset()} />
-        <Colour colour="black" onClick={() => this.colorSelect("black")} />
-        <Colour colour="blue" onClick={() => this.colorSelect("blue")} />
-        <Colour colour="pink" onClick={() => this.colorSelect("pink")} />
+        <Colour colour="metal" position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
+        <Colour colour="black" position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
+        <Colour colour="blue" position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
+        <Colour colour="pink" position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
       </div>,
       document.getElementById('car-colour')
     );
@@ -205,15 +205,32 @@ class App extends React.Component {
 
   //wheel picker
   wheelAppear () {
-
+    ReactDOM.render( 
+      <div>
+        <Colour colour="blue" position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
+        <Colour colour="black" position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
+        <Colour colour="pink" position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
+      </div>,
+      document.getElementById('wheel-colour')
+    );
   }
 
-  wheelSelect () {
-
+  wheelSelect (wheelColour) {
+    this.setState({wheels: wheelColour});
+    ReactDOM.render(
+      <div>
+        <img className="image" src={`img/${wheelColour}-tires.svg`} style={{width: '76vw'}}/>
+      </div>,
+      document.getElementById('wheel-overlay')
+    );
   }
 
   wheelReset () {
-
+    this.setState({wheels: "metal"});
+    ReactDOM.render(
+      <div></div>,
+      document.getElementById('wheel-overlay')
+    );
   }
 
   render() {
@@ -269,7 +286,8 @@ class App extends React.Component {
             <div className={`car3`}>
                 <img className="image" src="img/car.png"/>
             </div>
-            <div id="wheel-colour"></div>
+            <div id="wheel-colour" style={{display: 'inline', position: 'absolute'}}></div>
+            <div id="wheel-overlay" className={`car`}></div>
             <div className={`car3`}>
                 <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
             </div>
