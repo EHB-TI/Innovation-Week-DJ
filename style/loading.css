@@ -1,7 +1,7 @@
 /* Load Car */
 .car {
     animation: fadein 1s linear 1;
-    animation-delay: 18s;
+    animation-delay: 13s;
     animation-fill-mode: forwards;
 }
 
@@ -23,8 +23,8 @@
     border-radius: 50%;
     border: 18px solid #00afff;
     border-color: #00afff transparent #00afff transparent;
-    animation: lds-dual-ring 2.4s linear 7, dissapear-ring 1s linear;
-    animation-delay: 0s, 17s;
+    animation: lds-dual-ring 2.4s linear 5, dissapear-ring 1s linear;
+    animation-delay: 0s, 12s;
     animation-fill-mode: forwards, forwards;
 }
 
@@ -101,7 +101,7 @@
     opacity: 0;
     display: inline;
     position: absolute;
-    animation: buttonOne 3s linear 1;
+    animation: buttonOne 2s linear 1;
     animation-delay: 4.8s;
     animation-fill-mode: forwards;
 }
@@ -143,7 +143,7 @@
 
 .TextOne {
     animation: fadein 1s linear 1;
-    animation-delay: 7.5s;
+    animation-delay: 6.5s;
     animation-fill-mode: forwards;
 }
 
@@ -153,8 +153,8 @@
     opacity: 0;
     display: inline;
     position: absolute;
-    animation: buttonTwo 3s linear 1;
-    animation-delay: 7.8s;
+    animation: buttonTwo 2s linear 1;
+    animation-delay: 6.8s;
     animation-fill-mode: forwards;
 }
 
@@ -185,7 +185,7 @@
 
 .TextTwo {
     animation: fadein 1s linear 1;
-    animation-delay: 9.5s;
+    animation-delay: 7.5s;
     animation-fill-mode: forwards;
 }
 
@@ -195,8 +195,8 @@
     opacity: 0;
     display: inline;
     position: absolute;
-    animation: buttonThree 3s linear 1;
-    animation-delay: 10s;
+    animation: buttonThree 2s linear 1;
+    animation-delay: 8s;
     animation-fill-mode: forwards;
 }
 
@@ -233,7 +233,7 @@
 
 .TextThree {
     animation: fadein 1s linear 1;
-    animation-delay: 12.5s;
+    animation-delay: 9.5s;
     animation-fill-mode: forwards;
 }
 
@@ -243,8 +243,8 @@
     opacity: 0;
     display: inline;
     position: absolute;
-    animation: buttonFour 3s linear 1;
-    animation-delay: 13s;
+    animation: buttonFour 2s linear 1;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
 }
 
@@ -267,7 +267,7 @@
 
 .TextFour {
     animation: fadein 1s linear 1;
-    animation-delay: 14.5s;
+    animation-delay: 10.5s;
     animation-fill-mode: forwards;
 }
 
@@ -277,8 +277,8 @@
     opacity: 0;
     display: inline;
     position: absolute;
-    animation: buttonFive 3s linear 1;
-    animation-delay: 14.8s;
+    animation: buttonFive 2s linear 1;
+    animation-delay: 10.8s;
     animation-fill-mode: forwards;
 }
 
@@ -301,7 +301,7 @@
 
 .TextFive {
     animation: fadein 1s linear 1;
-    animation-delay: 16.4s;
+    animation-delay: 11.4s;
     animation-fill-mode: forwards;
 }
 

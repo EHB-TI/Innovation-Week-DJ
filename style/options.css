@@ -53,6 +53,16 @@
     opacity: 0;
 }
 
+.car4 {
+    left: calc(50% - 35vw);
+    top: calc(100% - 800px);
+    display: inline;
+    position: absolute;
+}
+.car4 img{
+    width: 70vw;
+}
+
 .light {
     opacity: 0;
 }
