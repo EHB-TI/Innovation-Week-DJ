@@ -291,6 +291,15 @@ class App extends React.Component {
           </div>
 
           <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
+            <div className={`car3`}>
+              <form>
+                <label htmlFor="fname">Location:</label><br/>
+                <input type="text" id="fname" name="fname"/><br/>
+                <label htmlFor="lname">Name:</label><br/>
+                <input type="text" id="lname" name="lname"/><br/><br/>
+                <input type="submit" value="Submit"/>
+              </form>
+            </div> 
           </div>
         </div>
       </div>
