@@ -1,3 +1,13 @@
+h1 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.selectedOptions {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .car {
     visibility: hidden;
     opacity: 0;
@@ -11,22 +21,28 @@
 }
 
 .car2 {
-    left: calc(50% - 38vw);
-    top: 20%;
+    left: calc(50% - 45vw);
+    top: calc(100% - 800px);
     display: inline;
     position: absolute;
 }
 .car2 img {
-    width: 76vw;
-}
-.car2-options {
-    left: calc(50% - 22vw);
-    top: 28%;
-    display: inline;
-    position: absolute;
+    width: 70vw;
 }
 .car2-options img {
-    width: 17vw;
+    width: 12vw;
+}
+.round {
+    display: inline;
+    position: absolute;
+    left: calc(50% + 30vw);
+    top: calc(100% - 700px);
+}
+.square {
+    display: inline;
+    position: absolute;
+    left: calc(50% + 30vw);
+    top: calc(100% - 500px);
 }
 .dashboard {
     visibility: hidden;
@@ -45,6 +61,16 @@
 .wheels {
     visibility: hidden;
     opacity: 0;
+}
+
+.car4 {
+    left: calc(50% - 35vw);
+    top: calc(100% - 800px);
+    display: inline;
+    position: absolute;
+}
+.car4 img{
+    width: 70vw;
 }
 
 .light {

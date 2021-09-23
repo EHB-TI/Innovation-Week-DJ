@@ -17,6 +17,11 @@ body {
     src: url(../fonts/miera/MierA-Bold.woff2);
 }
 
+@font-face {
+    font-family: Cambon-Bold;
+    src: url(../fonts/canbom/Cambon-Bold.woff2);
+}
+
 .TextOne {
     display: inline;
     position: absolute;
@@ -51,4 +56,61 @@ body {
     top: calc(100% - 70px); 
     left: calc(((100% - (98px * 5))/6) * 5 + (98px * 4) + 10px);
     opacity: 0;
+}
+
+h1 {
+    display: inline;
+    position: absolute;
+    font-family: Cambon-Bold;
+    color: #00afff;
+    font-size: 50px;
+    top: calc(2%);
+    left: calc(50% - 350px);
+}
+
+.option-summary{
+    position: absolute;
+    font-family: Cambon-Bold;
+    color: #00afff;
+}
+
+.form{
+    left: calc(50% - 6vw);
+    top: calc(50% - 150px);
+    display: inline;
+    position: absolute;
+}
+
+.formLabel {
+    font-family: Miera-Bold;
+    color: #00afff;
+    font-size: 20px;
+}
+
+.formInput {
+    font-family: Miera-Bold;
+    font-size: 20px;
+}
+
+.selectedOptions {
+    color: #00afff;
+}
+
+.form-submit-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    background:#00afff;
+    color:#fff;
+    border:1pxsolid#eee;
+    border-radius:20px;
+    box-shadow:5px5px5px#eee;
+    text-shadow:none;
+}
+.form-submit-button:hover {
+    background:#016ABC;
+    color:#fff;
+    border:1pxsolid#eee;
+    border-radius:20px;
+    box-shadow:5px5px5px#eee;
+    text-shadow:none;
 }
