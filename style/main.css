@@ -54,12 +54,23 @@ body {
 }
 
 .form{
-    left: calc(50% - 1vw);
+    left: calc(50% - 5vw);
     top: calc(50% - 150px);
     display: inline;
     position: absolute;
 }
 
 .formLabel {
-    color: white;
+    font-family: Miera-Bold;
+    color: #00afff;
+    font-size: 20px;
+}
+
+.formInput {
+    font-family: Miera-Bold;
+    font-size: 20px;
+}
+
+.selectedOptions {
+    color: #00afff;
 }

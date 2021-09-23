@@ -299,11 +299,15 @@ class App extends React.Component {
                 <input className={`formInput`} type="text" id="fname" name="location"/><br/><br/>
                 <label className={`formLabel`} htmlFor="lname">Name:</label><br/>
                 <input className={`formInput`} type="text" id="lname" name="name"/><br/><br/>
+                <div className={`selectedOptions`}>
+                <h3>Options Selected:</h3>
+                <p>Colour: {this.state.colour}</p>
+                <p>Wheel Colour: {this.state.wheels}</p>
+                <p>Stearing Wheel: {this.state.dashboard}</p>
+                <p>Seating: {this.state.seating}</p>
+              </div>
                 <input type="submit" value="Submit"/>
               </form>
-            </div>
-            <div>
-            
             </div> 
           </div>
 
