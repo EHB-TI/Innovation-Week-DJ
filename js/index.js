@@ -212,6 +212,14 @@ class App extends React.Component {
     );
   }
 
+  //form
+  handleFormSubmit (event){
+    event.preventDefault();
+    console.log("Form submit");
+    console.log(event.target.elements.location.value);
+    console.log(event.target.elements.name.value);
+  }
+
   render() {
     return (
       <div>
@@ -237,6 +245,13 @@ class App extends React.Component {
 
         <div className="Title">
           <h1>Customize your VW Erasmus</h1>
+          <div className={`selectedOptions`}>
+            <h3 className="option-summary" style={{top:'1%', right: '2%'}}>Options Selected: </h3>
+            <h4 className="option-summary" style={{top:'4%', right: '2%'}}>Colour: {this.state.colour}</h4>
+            <h4 className="option-summary" style={{top:'7%', right: '2%'}}>Stearing Wheel: {this.state.dashboard}</h4>
+            <h4 className="option-summary" style={{top:'10%', right: '2%'}}>Wheel Colour: {this.state.wheels}</h4>
+            <h4 className="option-summary" style={{top:'13%', right: '2%'}}>Seating: {this.state.seating}</h4>
+          </div>
         </div>
 
         <div id="main">
@@ -275,9 +290,6 @@ class App extends React.Component {
             </div>
           </div>
 
-          <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
-          </div>
-
 
           <div className={`colour ${this.state.imageStateColour?'fadeIn':'fadeOut'}`}>
             <div className={`car`}>
@@ -294,6 +306,19 @@ class App extends React.Component {
             <div className={`car3`}>
                 <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
             </div>
+          </div>
+
+
+          <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
+            <div className={`form`}>
+              <form onSubmit={(e) => this.handleFormSubmit(e)}>
+                <label className={`formLabel`} htmlFor="fname">Location:</label><br/>
+                <input className={`formInput`} type="text" id="fname" name="location"/><br/><br/>
+                <label className={`formLabel`} htmlFor="lname">Name:</label><br/>
+                <input className={`formInput`} type="text" id="lname" name="name"/><br/><br/>
+                <input type="submit" value="Submit"/>
+              </form>
+            </div> 
           </div>
         </div>
       </div>

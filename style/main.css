@@ -67,3 +67,31 @@ h1 {
     top: calc(2%);
     left: calc(50% - 350px);
 }
+
+.option-summary{
+    position: absolute;
+    font-family: Cambon-Bold;
+    color: #00afff;
+}
+
+.form{
+    left: calc(50% - 6vw);
+    top: calc(50% - 150px);
+    display: inline;
+    position: absolute;
+}
+
+.formLabel {
+    font-family: Miera-Bold;
+    color: #00afff;
+    font-size: 20px;
+}
+
+.formInput {
+    font-family: Miera-Bold;
+    font-size: 20px;
+}
+
+.selectedOptions {
+    color: #00afff;
+}
