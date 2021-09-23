@@ -62,7 +62,7 @@ h1 {
     display: inline;
     position: absolute;
     font-family: Cambon-Bold;
-    color: #00afff;
+    color: white;
     font-size: 50px;
     top: calc(2%);
     left: calc(50% - 350px);
@@ -70,8 +70,8 @@ h1 {
 
 .option-summary{
     position: absolute;
-    font-family: Cambon-Bold;
-    color: #00afff;
+    font-family: MierA-Bold;
+    color: white;
 }
 
 .form{
