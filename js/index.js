@@ -72,7 +72,7 @@ class App extends React.Component {
   componentDidMount(){
     setTimeout(() => {
        this.setState({ imageStateColour : true })
-    }, 18000);
+    }, 13000);
   }
 
   resetImageState(){
@@ -154,7 +154,7 @@ class App extends React.Component {
       this.setState({dashboard: type});
       ReactDOM.render(
         <div>
-          <img className="image" src={`img/dashboard-square.svg`} style={{width: '70vw'}}/>
+          <img className="image" src={`img/dashboard-square.png`} style={{width: '70vw'}}/>
         </div>,
         document.getElementById('dashboard-overlay')
       );
@@ -248,8 +248,8 @@ class App extends React.Component {
             </div>
             <div id="dashboard-overlay" className={`car2`}></div>
             <div className={`car2-options`}>
-              <img className="round" src="img/round-steering-wheel.png" onClick={() => this.steeringSelect("round")}/>
-              <img className="square" src="img/square-steering-wheel.png" onClick={() => this.steeringSelect("square")}/>
+              <img className="round" src="img/round-steering-wheel.png"/>
+              <img className="square" src="img/square-steering-wheel.png"/>
             </div>
           </div>
 
@@ -275,8 +275,8 @@ class App extends React.Component {
           </div>
           <div className={`dashboard ${this.state.imageStateDashboard?'fadeIn':'fadeOut'}`}>
           <div className={`car2-options`}>
-              <img className="round light" src="img/round-steering-wheel-light.png"/>
-              <img className="square light" src="img/square-steering-wheel-light.png"/>
+              <img className="round light" src="img/round-steering-wheel-light.png" onClick={() => this.steeringSelect("round")}/>
+              <img className="square light" src="img/square-steering-wheel-light.png" onClick={() => this.steeringSelect("square")}/>
             </div>
           </div>
           <div className={`wheels ${this.state.imageStateWheels?'fadeIn':'fadeOut'}`}>
