@@ -52,3 +52,14 @@ body {
     left: calc(((100% - (98px * 5))/6) * 5 + (98px * 4) + 10px);
     opacity: 0;
 }
+
+.form{
+    left: calc(50% - 1vw);
+    top: calc(50% - 150px);
+    display: inline;
+    position: absolute;
+}
+
+.formLabel {
+    color: white;
+}

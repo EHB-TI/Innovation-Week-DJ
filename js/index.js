@@ -99,6 +99,9 @@ class App extends React.Component {
         case "ButtonThree":
           this.setState({currentImage: "ButtonThree", imageStateWheels: true})
           break
+        case "ButtonFive":
+          this.setState({currentImage: "ButtonFive", imageStateTestDrive: true})
+          break
       }
     }
   }
@@ -262,17 +265,7 @@ class App extends React.Component {
           <div className={`seating ${this.state.imageStateSeating?'fadeIn':'fadeOut'}`}>
           </div>
 
-          <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
-            <div className={`car3`}>
-              <form>
-                <label htmlFor="fname">Location:</label><br/>
-                <input type="text" id="fname" name="fname"/><br/>
-                <label htmlFor="lname">Name:</label><br/>
-                <input type="text" id="lname" name="lname"/><br/><br/>
-                <input type="submit" value="Submit"/>
-              </form>
-            </div> 
-          </div>
+          
 
 
           <div className={`colour ${this.state.imageStateColour?'fadeIn':'fadeOut'}`}>
@@ -291,6 +284,19 @@ class App extends React.Component {
                 <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
             </div>
           </div>
+
+          <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
+            <div className={`form`}>
+              <form>
+                <label className={`formLabel`} htmlFor="fname">Location:</label><br/>
+                <input type="text" id="fname" name="fname"/><br/>
+                <label className={`formLabel`} htmlFor="lname">Name:</label><br/>
+                <input type="text" id="lname" name="lname"/><br/><br/>
+                <input type="submit" value="Submit"/>
+              </form>
+            </div> 
+          </div>
+
         </div>
       </div>
     )
