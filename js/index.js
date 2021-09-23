@@ -33,34 +33,16 @@ function Colour(props) {
     position: 'absolute',
     borderRadius: '50%',
     top: '125px',
+    backgroundColor: props.backgroundColor,
     left: props.position,
     opacity: '0',
     animation: 'pop 0.3s linear 1',
     animationDelay: props.delay,
     animationFillMode: 'forwards'
   }
-  switch (props.colour) {
-    case "metal":
-      return (
-        <button className={`circle ${props.colour}`} style={styleVar, {}} onClick={props.onClick} />
-      )
-    case "black":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "blue":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "pink":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "white":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#fdfdfd', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-  }
+  return (
+    <button className={`circle ${props.colour}`} style={styleVar} onClick={props.onClick} />
+  )
 }
 
 function Steering(props) {
@@ -180,9 +162,9 @@ class App extends React.Component {
     ReactDOM.render( 
       <div>
         <Colour colour="metal" backgroundColor='#878c92' position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
-        <Colour colour="black" position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
-        <Colour colour="blue" position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
-        <Colour colour="pink" position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
+        <Colour colour="black" backgroundColor='#242424' position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
+        <Colour colour="blue" backgroundColor='#1d6bc1' position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
+        <Colour colour="pink" backgroundColor='#925858' position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
       </div>,
       document.getElementById('car-colour')
     );
@@ -219,9 +201,9 @@ class App extends React.Component {
   wheelAppear () {
     ReactDOM.render( 
       <div>
-        <Colour colour="blue" position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
-        <Colour colour="black" position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
-        <Colour colour="white" position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
+        <Colour colour="blue" backgroundColor='#1d6bc1' position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
+        <Colour colour="black" backgroundColor='#242424' position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
+        <Colour colour="white" backgroundColor='#fdfdfd' position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
       </div>,
       document.getElementById('wheel-colour')
     );
