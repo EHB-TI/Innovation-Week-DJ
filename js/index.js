@@ -99,6 +99,12 @@ class App extends React.Component {
         case "ButtonThree":
           this.setState({currentImage: "ButtonThree", imageStateWheels: true})
           break
+        case "ButtonFour":
+          this.setState({currentImage: "ButtonFour", imageStateSeating: true})
+          break
+        case "ButtonFive":
+          this.setState({currentImage: "ButtonFive", imageStateTestDrive: true})
+          break
       }
     }
   }
@@ -260,6 +266,9 @@ class App extends React.Component {
           </div>
 
           <div className={`seating ${this.state.imageStateSeating?'fadeIn':'fadeOut'}`}>
+            <div className="car4">
+              <img className="image" src="img/seating.png"/>
+            </div>
           </div>
 
           <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
