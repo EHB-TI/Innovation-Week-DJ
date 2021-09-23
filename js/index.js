@@ -221,7 +221,7 @@ class App extends React.Component {
       <div>
         <Colour colour="blue" position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
         <Colour colour="black" position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
-        <Colour colour="pink" position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
+        <Colour colour="white" position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
       </div>,
       document.getElementById('wheel-colour')
     );
@@ -238,7 +238,7 @@ class App extends React.Component {
   }
 
   wheelReset () {
-    this.setState({wheels: "metal"});
+    this.setState({wheels: "blue"});
     ReactDOM.render(
       <div></div>,
       document.getElementById('wheel-overlay')
