@@ -27,28 +27,22 @@ function Logo(props) {
 }
 
 function Colour(props) {
-  switch (props.colour) {
-    case "metal":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "black":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#242424', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "blue":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#1d6bc1', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "pink":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#925858', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
-    case "white":
-      return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#fdfdfd', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
-      )
+  const styleVar = {
+    width: '5vw',
+    height: '5vw',
+    position: 'absolute',
+    borderRadius: '50%',
+    top: '125px',
+    backgroundColor: props.backgroundColor,
+    left: props.position,
+    opacity: '0',
+    animation: 'pop 0.3s linear 1',
+    animationDelay: props.delay,
+    animationFillMode: 'forwards'
   }
+  return (
+    <button className={`circle ${props.colour}`} style={styleVar} onClick={props.onClick} />
+  )
 }
 
 function Steering(props) {
@@ -67,18 +61,6 @@ class App extends React.Component {
       imageStateWheels: false,
       imageStateSeating: false,
       imageStateTestDrive: false,
-
-      colourStateMetal: false,
-      colourStateBlack: false,
-      colourStateBlue: false,
-      colourStatePink: false,
-
-      dashboardStateRound: false,
-      dashboardStateSquare: false,
-
-      tiresStateBlue: false,
-      tiresStateBlack: false,
-      tiresStateWhite: false,
 
       colour: "metal",
       dashboard: "round",
@@ -100,18 +82,6 @@ class App extends React.Component {
       imageStateWheels: false,
       imageStateSeating: false,
       imageStateTestDrive: false,
-
-      colourStateMetal: false,
-      colourStateBlack: false,
-      colourStateBlue: false,
-      colourStatePink: false,
-
-      dashboardStateRound: false,
-      dashboardStateSquare: false,
-
-      tiresStateBlue: false,
-      tiresStateBlack: false,
-      tiresStateWhite: false,
     })
   }
 
@@ -121,43 +91,13 @@ class App extends React.Component {
       this.resetImageState()
       switch(option) {
         case "ButtonOne":
-          switch (this.state.colour) {
-            case "metal":
-              this.setState({currentImage: "ButtonOne", imageStateColour: true, colourStateMetal: true})
-              break;
-            case "black":
-              this.setState({currentImage: "ButtonOne", imageStateColour: true, colourStateBlack: true})
-              break;
-            case "blue":
-              this.setState({currentImage: "ButtonOne", imageStateColour: true, colourStateBlue: true})
-              break;
-            case "pink":
-              this.setState({currentImage: "ButtonOne", imageStateColour: true, colourStatePink: true})
-              break;
-          }
-          break
+          this.setState({currentImage: "ButtonOne", imageStateColour: true});
+          break;
         case "ButtonTwo":
-          switch (this.state.dashboard) {
-            case "round":
-              this.setState({currentImage: "ButtonTwo", imageStateDashboard: true, dashboardStateRound: true})
-              break;
-            case "square":
-              this.setState({currentImage: "ButtonTwo", imageStateDashboard: true, dashboardStateSquare: true})
-              break;
-          }
+          this.setState({currentImage: "ButtonTwo", imageStateDashboard: true})
           break
         case "ButtonThree":
-          switch (this.state.wheels) {
-            case "blue":
-              this.setState({currentImage: "ButtonThree", imageStateWheels: true, tiresStateBlue: true})
-              break;
-            case "black":
-              this.setState({currentImage: "ButtonThree", imageStateWheels: true, tiresStateBlack: true})
-              break;
-            case "white":
-              this.setState({currentImage: "ButtonThree", imageStateWheels: true, tiresStateWhite: true})
-              break;
-          }
+          this.setState({currentImage: "ButtonThree", imageStateWheels: true})
           break
       }
     }
@@ -167,10 +107,10 @@ class App extends React.Component {
   colourAppear () {
     ReactDOM.render( 
       <div>
-        <Colour colour="metal" position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
-        <Colour colour="black" position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
-        <Colour colour="blue" position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
-        <Colour colour="pink" position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
+        <Colour colour="metal" backgroundColor='#878c92' position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
+        <Colour colour="black" backgroundColor='#242424' position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
+        <Colour colour="blue" backgroundColor='#1d6bc1' position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
+        <Colour colour="pink" backgroundColor='#925858' position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
       </div>,
       document.getElementById('car-colour')
     );
@@ -184,6 +124,12 @@ class App extends React.Component {
       </div>,
       document.getElementById('color-overlay')
     );
+    ReactDOM.render(
+      <div>
+        <img className="image" src={`img/${colour}-car.svg`} style={{width: '76vw'}}/>
+      </div>,
+      document.getElementById('color-overlay-wheel')
+    );
   }
 
   colorReset () {
@@ -192,24 +138,41 @@ class App extends React.Component {
       <div></div>,
       document.getElementById('color-overlay')
     );
+    ReactDOM.render(
+      <div></div>,
+      document.getElementById('color-overlay-wheel')
+    );
   }
 
   //steering wheel picker
-  steeringAppear () {
 
-  }
-
-  steeringSelect () {
-    
+  steeringSelect (type) {
+    if (type == "square") {
+      this.setState({dashboard: type});
+      ReactDOM.render(
+        <div>
+          <img className="image" src={`img/dashboard-square.svg`} style={{width: '70vw'}}/>
+        </div>,
+        document.getElementById('dashboard-overlay')
+      );
+    }
+    else {
+      this.setState({dashboard: type});
+      ReactDOM.render(
+        <div>
+        </div>,
+        document.getElementById('dashboard-overlay')
+      );
+    }
   }
 
   //wheel picker
   wheelAppear () {
     ReactDOM.render( 
       <div>
-        <Colour colour="blue" position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
-        <Colour colour="black" position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
-        <Colour colour="white" position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
+        <Colour colour="blue" backgroundColor='#1d6bc1' position="calc(100% + 15vw)" onClick={() => this.wheelReset()} delay="0s" />
+        <Colour colour="black" backgroundColor='#242424' position="calc(100% + 25vw)" onClick={() => this.wheelSelect("black")} delay="0.3s" />
+        <Colour colour="white" backgroundColor='#fdfdfd' position="calc(100% + 35vw)" onClick={() => this.wheelSelect("white")} delay="0.6s" />
       </div>,
       document.getElementById('wheel-colour')
     );
@@ -223,6 +186,12 @@ class App extends React.Component {
       </div>,
       document.getElementById('wheel-overlay')
     );
+    ReactDOM.render(
+      <div>
+        <img className="image" src={`img/${wheelColour}-tires.svg`} style={{width: '76vw'}}/>
+      </div>,
+      document.getElementById('wheel-overlay-car')
+    );
   }
 
   wheelReset () {
@@ -230,6 +199,10 @@ class App extends React.Component {
     ReactDOM.render(
       <div></div>,
       document.getElementById('wheel-overlay')
+    );
+    ReactDOM.render(
+      <div></div>,
+      document.getElementById('wheel-overlay-car')
     );
   }
 
@@ -263,22 +236,17 @@ class App extends React.Component {
             </div>
             <div id="car-colour" style={{display: 'inline', position: 'absolute'}}></div>
             <div id="color-overlay" className={`car`}></div>
-            <div className={`car`}>
-                <img className="light" src="img/car-light.png" onClick={() => this.colourAppear()}/>
-            </div>
+            <div id="wheel-overlay-car" className={`car`}></div>
           </div>
 
           <div className={`dashboard ${this.state.imageStateDashboard?'fadeIn':'fadeOut'}`}>
             <div className={`car2`}>
-                <img className="image" src="img/dashboard.png"/>
+                <img className="image" src="img/dashboard-round.png"/>
             </div>
-            <div className={`dashboard-options`}>
-              <div className={`car2-options`}>
-                <img className="image" src="img/round-steering-wheel.png"/>
-              </div>
-              <div className={`car2-options`}>
-                <img className="light" src="img/round-steering-wheel-light.png" onClick={() => this.steeringAppear()}/>
-              </div>
+            <div id="dashboard-overlay" className={`car2`}></div>
+            <div className={`car2-options`}>
+              <img className="round" src="img/round-steering-wheel.png" onClick={() => this.steeringSelect("round")}/>
+              <img className="square" src="img/square-steering-wheel.png" onClick={() => this.steeringSelect("square")}/>
             </div>
           </div>
 
@@ -287,16 +255,32 @@ class App extends React.Component {
                 <img className="image" src="img/car.png"/>
             </div>
             <div id="wheel-colour" style={{display: 'inline', position: 'absolute'}}></div>
+            <div id="color-overlay-wheel" className={`car`}></div>
             <div id="wheel-overlay" className={`car`}></div>
-            <div className={`car3`}>
-                <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
-            </div>
           </div>
 
           <div className={`seating ${this.state.imageStateSeating?'fadeIn':'fadeOut'}`}>
           </div>
 
           <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
+          </div>
+
+
+          <div className={`colour ${this.state.imageStateColour?'fadeIn':'fadeOut'}`}>
+            <div className={`car`}>
+                <img className="light" src="img/car-light.png" onClick={() => this.colourAppear()}/>
+            </div>
+          </div>
+          <div className={`dashboard ${this.state.imageStateDashboard?'fadeIn':'fadeOut'}`}>
+          <div className={`car2-options`}>
+              <img className="round light" src="img/round-steering-wheel-light.png"/>
+              <img className="square light" src="img/square-steering-wheel-light.png"/>
+            </div>
+          </div>
+          <div className={`wheels ${this.state.imageStateWheels?'fadeIn':'fadeOut'}`}>
+            <div className={`car3`}>
+                <img className="light" src="img/car-wheel.png" onClick={() => this.wheelAppear()}/>
+            </div>
           </div>
         </div>
       </div>
