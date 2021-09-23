@@ -95,3 +95,22 @@ h1 {
 .selectedOptions {
     color: #00afff;
 }
+
+.form-submit-button {
+    font-size: 20px;
+    padding: 5px 10px;
+    background:#00afff;
+    color:#fff;
+    border:1pxsolid#eee;
+    border-radius:20px;
+    box-shadow:5px5px5px#eee;
+    text-shadow:none;
+}
+.form-submit-button:hover {
+    background:#016ABC;
+    color:#fff;
+    border:1pxsolid#eee;
+    border-radius:20px;
+    box-shadow:5px5px5px#eee;
+    text-shadow:none;
+}

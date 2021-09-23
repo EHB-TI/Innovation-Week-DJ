@@ -316,7 +316,7 @@ class App extends React.Component {
                 <input className={`formInput`} type="text" id="fname" name="location"/><br/><br/>
                 <label className={`formLabel`} htmlFor="lname">Name:</label><br/>
                 <input className={`formInput`} type="text" id="lname" name="name"/><br/><br/>
-                <input type="submit" value="Submit"/>
+                <input className={`form-submit-button`} type="submit" value="Submit"/>
               </form>
             </div> 
           </div>
