@@ -22,7 +22,7 @@ h1 {
 
 .car2 {
     left: calc(50% - 45vw);
-    top: calc(100% - 800px);
+    top: calc(100% - 300px - 49vh);
     display: inline;
     position: absolute;
 }
@@ -36,13 +36,13 @@ h1 {
     display: inline;
     position: absolute;
     left: calc(50% + 30vw);
-    top: calc(100% - 700px);
+    top: calc(100% - 300px - 43vh);
 }
 .square {
     display: inline;
     position: absolute;
     left: calc(50% + 30vw);
-    top: calc(100% - 500px);
+    top: calc(100% - 300px - 22vh);
 }
 .dashboard {
     visibility: hidden;
@@ -65,7 +65,7 @@ h1 {
 
 .car4 {
     left: calc(50% - 35vw);
-    top: calc(100% - 800px);
+    top: calc(100% - 300px - 49vh);
     display: inline;
     position: absolute;
 }
