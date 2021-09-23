@@ -209,6 +209,13 @@ class App extends React.Component {
     );
   }
 
+  handleFormSubmit (event){
+    event.preventDefault();
+    console.log("Form submit");
+    console.log(event.target.elements.location.value);
+    console.log(event.target.elements.name.value);
+  }
+
   render() {
     return (
       <div>
@@ -287,13 +294,16 @@ class App extends React.Component {
 
           <div className={`test-drive ${this.state.imageStateTestDrive?'fadeIn':'fadeOut'}`}>
             <div className={`form`}>
-              <form>
+              <form onSubmit={(e) => this.handleFormSubmit(e)}>
                 <label className={`formLabel`} htmlFor="fname">Location:</label><br/>
-                <input type="text" id="fname" name="fname"/><br/>
+                <input className={`formInput`} type="text" id="fname" name="location"/><br/><br/>
                 <label className={`formLabel`} htmlFor="lname">Name:</label><br/>
-                <input type="text" id="lname" name="lname"/><br/><br/>
+                <input className={`formInput`} type="text" id="lname" name="name"/><br/><br/>
                 <input type="submit" value="Submit"/>
               </form>
+            </div>
+            <div>
+            
             </div> 
           </div>
 
