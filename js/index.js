@@ -27,10 +27,22 @@ function Logo(props) {
 }
 
 function Colour(props) {
+  const styleVar = {
+    width: '5vw',
+    height: '5vw',
+    position: 'absolute',
+    borderRadius: '50%',
+    top: '125px',
+    left: props.position,
+    opacity: '0',
+    animation: 'pop 0.3s linear 1',
+    animationDelay: props.delay,
+    animationFillMode: 'forwards'
+  }
   switch (props.colour) {
     case "metal":
       return (
-        <button className={`circle ${props.colour}`} style={{width: '5vw', height: '5vw', position: 'absolute', borderRadius: '50%', backgroundColor: '#878c92', top: '125px', left: props.position, opacity: '0', animation: 'pop 0.3s linear 1', animationDelay: props.delay, animationFillMode: 'forwards'}} onClick={props.onClick} />
+        <button className={`circle ${props.colour}`} style={styleVar, {}} onClick={props.onClick} />
       )
     case "black":
       return (
@@ -167,7 +179,7 @@ class App extends React.Component {
   colourAppear () {
     ReactDOM.render( 
       <div>
-        <Colour colour="metal" position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
+        <Colour colour="metal" backgroundColor='#878c92' position="calc(100% + 10vw)" onClick={() => this.colorReset()} delay="0s" />
         <Colour colour="black" position="calc(100% + 20vw)" onClick={() => this.colorSelect("black")} delay="0.3s" />
         <Colour colour="blue" position="calc(100% + 30vw)" onClick={() => this.colorSelect("blue")} delay="0.6s" />
         <Colour colour="pink" position="calc(100% + 40vw)" onClick={() => this.colorSelect("pink")} delay="0.9s" />
