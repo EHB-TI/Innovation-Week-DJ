@@ -17,6 +17,11 @@ body {
     src: url(../fonts/miera/MierA-Bold.woff2);
 }
 
+@font-face {
+    font-family: Cambon-Bold;
+    src: url(../fonts/canbom/Cambon-Bold.woff2);
+}
+
 .TextOne {
     display: inline;
     position: absolute;
@@ -51,4 +56,14 @@ body {
     top: calc(100% - 70px); 
     left: calc(((100% - (98px * 5))/6) * 5 + (98px * 4) + 10px);
     opacity: 0;
+}
+
+h1 {
+    display: inline;
+    position: absolute;
+    font-family: Cambon-Bold;
+    color: #00afff;
+    font-size: 50px;
+    top: calc(2%);
+    left: calc(50% - 350px);
 }

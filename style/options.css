@@ -1,3 +1,8 @@
+h1 {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .car {
     visibility: hidden;
     opacity: 0;
@@ -55,7 +60,7 @@
 
 .car4 {
     left: calc(50% - 35vw);
-    top: calc(100% - 850px);
+    top: calc(100% - 800px);
     display: inline;
     position: absolute;
 }

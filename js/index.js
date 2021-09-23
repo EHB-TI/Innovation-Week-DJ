@@ -235,6 +235,10 @@ class App extends React.Component {
             <ButtonText class="TextFive" text="Test Drive"/>
         </div>
 
+        <div className="Title">
+          <h1>Customize your VW Erasmus</h1>
+        </div>
+
         <div id="main">
           <div className={`colour ${this.state.imageStateColour?'fadeIn':'fadeOut'}`}>
             <div className={`car`}>

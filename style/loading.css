@@ -5,6 +5,12 @@
     animation-fill-mode: forwards;
 }
 
+h1 {
+    animation: fadein 1s linear 1;
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+}
+
 /* Middle Ring */
 .lds-dual-ring {
     display: inline;
