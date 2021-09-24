@@ -1,19 +1,19 @@
 /* Load Car */
 .car {
     animation: fadein 1s linear 1;
-    animation-delay: 13s;
+    animation-delay: 10.6s;
     animation-fill-mode: forwards;
 }
 
 h1 {
     animation: fadein 1s linear 1;
-    animation-delay: 15s;
+    animation-delay: 12.6s;
     animation-fill-mode: forwards;
 }
 
 .selectedOptions {
     animation: fadein 1s linear 1;
-    animation-delay: 16s;
+    animation-delay: 13.6s;
     animation-fill-mode: forwards;
 }
 
@@ -35,8 +35,8 @@ h1 {
     border-radius: 50%;
     border: 18px solid #00afff;
     border-color: #00afff transparent #00afff transparent;
-    animation: lds-dual-ring 2.4s linear 5, dissapear-ring 1s linear;
-    animation-delay: 0s, 12s;
+    animation: lds-dual-ring 2.4s linear 4, dissapear-ring 1s linear;
+    animation-delay: 0s, 9.6s;
     animation-fill-mode: forwards, forwards;
 }
 
@@ -69,7 +69,7 @@ h1 {
     position: absolute;
     top: calc(50% - 20px);
     left: calc(50% - 94px);
-    animation: fadeinout 2.4s linear 2;
+    animation: fadeinout 2.4s linear 1;
     animation-fill-mode: forwards;
 }
 
@@ -87,7 +87,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: fadein 2.4s linear 1;
-    animation-delay: 4.8s;
+    animation-delay: 2.8s;
     animation-fill-mode: forwards;
 }
 
@@ -114,7 +114,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: buttonOne 2s linear 1;
-    animation-delay: 4.8s;
+    animation-delay: 2.4s;
     animation-fill-mode: forwards;
 }
 
@@ -155,7 +155,7 @@ h1 {
 
 .TextOne {
     animation: fadein 1s linear 1;
-    animation-delay: 6.5s;
+    animation-delay: 4.1s;
     animation-fill-mode: forwards;
 }
 
@@ -166,7 +166,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: buttonTwo 2s linear 1;
-    animation-delay: 6.8s;
+    animation-delay: 4.4s;
     animation-fill-mode: forwards;
 }
 
@@ -197,7 +197,7 @@ h1 {
 
 .TextTwo {
     animation: fadein 1s linear 1;
-    animation-delay: 7.5s;
+    animation-delay: 5.1s;
     animation-fill-mode: forwards;
 }
 
@@ -208,7 +208,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: buttonThree 2s linear 1;
-    animation-delay: 8s;
+    animation-delay: 5.6s;
     animation-fill-mode: forwards;
 }
 
@@ -245,7 +245,7 @@ h1 {
 
 .TextThree {
     animation: fadein 1s linear 1;
-    animation-delay: 9.5s;
+    animation-delay: 7.1s;
     animation-fill-mode: forwards;
 }
 
@@ -256,7 +256,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: buttonFour 2s linear 1;
-    animation-delay: 10s;
+    animation-delay: 7.6s;
     animation-fill-mode: forwards;
 }
 
@@ -279,7 +279,7 @@ h1 {
 
 .TextFour {
     animation: fadein 1s linear 1;
-    animation-delay: 10.5s;
+    animation-delay: 8.1s;
     animation-fill-mode: forwards;
 }
 
@@ -290,7 +290,7 @@ h1 {
     display: inline;
     position: absolute;
     animation: buttonFive 2s linear 1;
-    animation-delay: 10.8s;
+    animation-delay: 8.4s;
     animation-fill-mode: forwards;
 }
 
@@ -313,7 +313,7 @@ h1 {
 
 .TextFive {
     animation: fadein 1s linear 1;
-    animation-delay: 11.4s;
+    animation-delay: 9s;
     animation-fill-mode: forwards;
 }
 

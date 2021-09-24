@@ -72,7 +72,7 @@ class App extends React.Component {
   componentDidMount(){
     setTimeout(() => {
        this.setState({ imageStateColour : true })
-    }, 13000);
+    }, 10600);
   }
 
   resetImageState(){
